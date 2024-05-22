@@ -43,6 +43,8 @@ import org.junit.{After, Assert, Before}
 import java.io.File
 import java.util
 
+import org.apache.commons.lang3.ArrayUtils
+
 import scala.collection.JavaConversions._
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
@@ -215,8 +217,8 @@ class StreamingWithStateTestBase(state: StateBackendMode) extends StreamingTestB
       }
 
       if (char1 == leftBrace) {
-        val rightBraceIdx = array1.subSequence(idx + 1, l).toString.indexOf(rightBrace)
-        appendStrToMap(array1.subSequence(idx + 1, rightBraceIdx + idx + 2), map1)
+        val rightBraceIdx = ArrayUtils.subarray(array1, idx + 1, l).toString.indexOf(rightBrace)
+        appendStrToMap(ArrayUtils.subarray(array1, idx + 1, rightBraceIdx + idx + 2).toString, map1)
         idx += rightBraceIdx
       } else {
         idx += 1

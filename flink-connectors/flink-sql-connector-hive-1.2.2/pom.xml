@@ -59,6 +59,11 @@ under the License.
 					<groupId>org.pentaho</groupId>
 					<artifactId>pentaho-aggdesigner-algorithm</artifactId>
 				</exclusion>
+				<exclusion>
+					<!-- This dependency is no longer shipped with the JDK since Java 9.-->
+					<groupId>jdk.tools</groupId>
+					<artifactId>jdk.tools</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 
