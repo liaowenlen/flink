@@ -142,7 +142,7 @@ object ExecNodePlanDumper {
 
     nodes.foreach(visitor.visit)
 
-    if (sb.length() > 0) {
+    if (sb.length > 0) {
       // delete last line separator
       sb.deleteCharAt(sb.length - 1)
     }
