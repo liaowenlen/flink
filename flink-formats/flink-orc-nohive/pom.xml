@@ -69,7 +69,7 @@ under the License.
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- test dependencies -->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
@@ -77,6 +77,12 @@ under the License.
 			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-common</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
